@@ -55,9 +55,10 @@ An intelligent, production-ready campus feedback telemetry and AI triage web app
 - **Emotion Recognition**: Identifies student sentiment state (*Delighted*, *Satisfied*, *Constructive*, *Neutral*, *Disappointed*, *Frustrated*, *Fearful*).
 - **Actionable Routing**: Maps each category to standard remediation actions, responsible department owners, and SLAs.
 
-### 4. 🔒 Role-Based Access Control & Security
-- Secure JWT-based authentication (`HS256`).
-- PBKDF2-HMAC-SHA256 password hashing with unique 16-byte cryptographic salts.
+### 4. 🔥 Firebase Authentication & Role-Based Security
+- **Google Sign-In**: Integrated with **Firebase Auth (`signInWithPopup`)** with custom account selection and auto-mapping to institutional profile.
+- **Dedicated Signup Page (`/#/signup`)**: Full page for registering new student and administrator accounts via Firebase or Google Sign-In.
+- **Dual Auth Compatibility**: Secure Firebase Auth + backend JWT authentication (`HS256`) with PBKDF2-HMAC-SHA256 password hashing.
 - Roles: `admin` (can modify ticket status, assignees, admin notes, and demo datasets) and `student`.
 - **Pre-seeded Admin Account**: `admin@campuspulse.edu` / `admin123`.
 - **1-Click Quick Demo Login** buttons for easy testing.

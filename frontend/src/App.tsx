@@ -6,6 +6,7 @@ import { AuthModal } from "./components/AuthModal";
 import Landing from "./pages/Landing";
 import FeedbackPage from "./pages/FeedbackPage";
 import AdminLayout from "./pages/admin/AdminLayout";
+import SignupPage from "./pages/SignupPage";
 
 export default function App() {
   const [route] = useHashRoute();
@@ -15,7 +16,9 @@ export default function App() {
   return (
     <AuthProvider>
       <StoreProvider>
-        {r.startsWith("/admin") ? (
+        {r === "/signup" || r === "/login" ? (
+          <SignupPage />
+        ) : r.startsWith("/admin") ? (
           <AdminLayout route={r} onOpenAuth={() => setAuthModalOpen(true)} />
         ) : r.startsWith("/feedback") ? (
           <FeedbackPage onOpenAuth={() => setAuthModalOpen(true)} />

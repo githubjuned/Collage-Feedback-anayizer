@@ -119,12 +119,20 @@ export default function Landing({ onOpenAuth }: { onOpenAuth?: () => void }) {
                 </button>
               </div>
             ) : (
-              <button
-                onClick={onOpenAuth}
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
-              >
-                Sign In
-              </button>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={onOpenAuth}
+                  className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+                >
+                  Sign In
+                </button>
+                <a
+                  href="#/signup"
+                  className="rounded-lg border border-blue-200 bg-blue-50/70 px-3 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-100"
+                >
+                  Sign Up
+                </a>
+              </div>
             )}
             <a href="#/admin" className="rounded-lg border border-slate-200 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-blue-300 hover:text-blue-700">Admin dashboard</a>
             <a href="#/feedback" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-blue-600/30 transition hover:bg-blue-700">Submit feedback</a>
